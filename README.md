@@ -29,6 +29,7 @@ This command line application lets managers at Bamazon view current inventory an
 ### User Story
 As a Bamazon manager, I want to see and update product information so that I can keep track of customer purchases and ensure there is enough inventory in stock to meet demand.
 
+## Technologies Used
 Below is picture showing the original values for the stock of the Bamazon store, which has since changed as customers have made purchases and managers have updated products.
 
 ![mySQL Table](/mySQLScreenshot.png)

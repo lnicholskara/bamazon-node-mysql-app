@@ -28,7 +28,7 @@ function managerOptions () {
         type: "list",
         name: "choice",
         message: "How would you like to proceed?",
-        choices: ["View Products for Sale", "View Low Inventory", "Add to Inventory", "Exit shop"]
+        choices: ["View Products for Sale", "View Low Inventory", "Add to Inventory", "Add New Product", "Exit shop"]
     }).then(actionSelected)
 
 };
@@ -46,6 +46,9 @@ function actionSelected(answer) {
         addInventory();
     }
 
+    else if (answer.choice === "Add New Product") {
+        addProduct();
+    }
 
     else {
         db.end();
@@ -133,6 +136,49 @@ function addInventory () {
                 managerOptions();
 
             });
+
+        });
+    
+    });
+
+};
+
+function addProduct () {
+
+    inquirer.prompt([
+        {
+        type: "input",
+        name: "nameToAdd",
+        message: "What is the name of the product you'd like to add?"
+        },
+        {
+        type: "input",
+        name: "departmentToAdd",
+        message: "What is the department name for the product?"       
+        },
+        {
+        type: "input",
+        name: "priceToAdd",
+        message: "What is the product's price?"       
+        },
+        {
+        type: "input",
+        name: "quantityToAdd",
+        message: "How many items are in stock?"       
+        }
+    ]).then(function(answer){
+
+        var product = {
+            product_name: answer.nameToAdd,
+            department_name: answer.departmentToAdd,
+            consumer_price: answer.priceToAdd,
+            stock_quantity: answer.quantityToAdd
+        }
+
+        db.query("INSERT INTO products SET ?", product, function(err, res) {
+            if (err) throw err;
+
+            console.log(res);
 
         });
     
