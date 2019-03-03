@@ -1,6 +1,8 @@
-# bamazon-node-mysql-app
+# Bamazon Store
 
 ![Command Line Example](/BamazonCustomerScreenshot.png)
+
+## Customer App
 
 This command line application written with Node.js prompts customers to make a purchase from a fictional online store. When started, the available items for purchase are displayed in the command line, followed by a prompt to "Make a Purchase" or "Exit Bamazon shop".
 
@@ -12,13 +14,25 @@ If the item and quantity requested by the customer is available, the command lin
 
 When the request is complete, the customer can choose to make another purchase or exit the Bamazon store.
 
-## User Story
+### User Story
 As a Bamazon customer, I want to see available product information so that I can make a choice about which item to purchase and see the total cost of my order.
+
+## Manager App
+This command line application lets managers at Bamazon view current inventory and add additional stock or products as they become available.
+
+### Manager Options
+* View Products for Sale
+* View Low Inventory
+* Add to Inventory
+* Exit shop
+
+### User Story
+As a Bamazon manager, I want to see and update product information so that I can keep track of customer purchases and ensure there is enough inventory in stock to meet demand.
+
+Below is picture showing the original values for the stock of the Bamazon store, which has since changed as customers have made purchases and managers have updated products.
+
+![mySQL Table](/mySQLScreenshot.png)
 
 ### Node.js Packages Used
 * inquirer
 * mysql
-
-Below is picture showing the original values for the stock of the Bamazon store, which has since changed as customers have made purchases.
-
-![mySQL Table](/mySQLScreenshot.png)
