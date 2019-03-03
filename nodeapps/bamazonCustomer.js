@@ -20,7 +20,8 @@ db.connect(function(err){
     if (err) throw err;
     
     db.query("SELECT item_id, product_name, consumer_price FROM products", function (err, res) {
-
+        if (err) throw err;
+        
         console.log("\n ID / Name / Price");
 
         for (var i = 0; i < res.length; i++) {
