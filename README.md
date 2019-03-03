@@ -1,6 +1,6 @@
 # Bamazon Store
 
-![Command Line Example](/BamazonCustomerScreenshot.png)
+![Customer Example](/BamazonCustomerScreenshot.png)
 
 ## Customer App
 
@@ -17,6 +17,8 @@ When the request is complete, the customer can choose to make another purchase o
 ### User Story
 As a Bamazon customer, I want to see available product information so that I can make a choice about which item to purchase and see the total cost of my order.
 
+![Manager Example](/BamazonManagerScreenshot.png)
+
 ## Manager App
 This command line application lets managers at Bamazon view current inventory and add additional stock or products as they become available.
 
@@ -24,6 +26,7 @@ This command line application lets managers at Bamazon view current inventory an
 * View Products for Sale
 * View Low Inventory
 * Add to Inventory
+* Add New Product
 * Exit shop
 
 ### User Story

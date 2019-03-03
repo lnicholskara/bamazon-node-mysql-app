@@ -178,7 +178,9 @@ function addProduct () {
         db.query("INSERT INTO products SET ?", product, function(err, res) {
             if (err) throw err;
 
-            console.log(res);
+            console.log("\nNew Product Added!\n");
+
+            managerOptions();
 
         });
     
